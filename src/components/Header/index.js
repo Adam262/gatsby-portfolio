@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 import { colors } from '../../styles/main'
 
 import styled, { ThemeProvider } from 'styled-components'
-import { cloneDeep, mapValues } from 'lodash';
+import { cloneDeep, mapValues, findKey } from 'lodash';
 
 const borderBottom = (noDecoration, isActive, colors) => {
   if (!!noDecoration) {
@@ -28,6 +29,8 @@ const StyledLink = styled(Link)`
   padding-bottom: 5px;
   text-decoration: none;
   border-bottom: ${props => borderBottom(props.noDecoration, props.active, props.theme)};
+  transition-property: border-bottom;
+  transition-duration: 1s;
 `;
 
 const NavBar = styled.nav`
@@ -44,9 +47,9 @@ class Header extends React.Component {
 
     this.state = {
       links: {
-        work: { to: 'Work', text: 'Work', active: false },
-        about: { to: 'About', text: 'About', active: false },
-        contact: { to: 'Contact', text: 'Contact', active: false },
+        work: { to: 'work', text: 'Work', active: false },
+        about: { to: 'about', text: 'About', active: false },
+        contact: { to: 'contact', text: 'Contact', active: false },
       }
     }
   }
@@ -64,6 +67,13 @@ class Header extends React.Component {
     this.setState({ links: links });
   } 
 
+  activeTitle() {
+    const links = this.state.links;
+    const activeLinkKey = findKey(links, link => !!link.active);
+ 
+    return !!activeLinkKey ? `Adam Barcan | ${links[activeLinkKey].text}` : 'Adam Barcan'
+  }
+
   render() {
     const work = this.state.links.work;
     const about = this.state.links.about;
@@ -72,6 +82,7 @@ class Header extends React.Component {
     return (
       <ThemeProvider theme={colors}>
         <Container> 
+          <Helmet title={ this.activeTitle() } />
           <StyledLink 
             noDecoration 
             onClick={ () => this.onClick("home") } 

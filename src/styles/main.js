@@ -2,17 +2,17 @@ import styled, { injectGlobal } from 'styled-components';
 
 injectGlobal`
   @font-face {
-    font-family: 'Raleway, Arial, sans-serif';
+    font-family: 'Raleway';
     src: url('./raleway/Raleway-Regular.ttf');
 
-    font-family: 'Open Sans, Verdana, sans-serif';
+    font-family: 'Open Sans';
     src: url('./open-sans/OpenSans-Regular.ttf');
   } 
 
   body {
     background: black;
     color: white;
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
     padding: '0px 1.0875rem 1.45rem',
     paddingTop: 0,
     margin: 0 auto;
@@ -21,6 +21,11 @@ injectGlobal`
 
   h1 {
     max-width: 8em;
+    font-family: 'Open Sans', Arial, sans-serif;
+  }
+
+  h2 {
+    font-family: 'Open Sans', Arial, sans-serif;
   }
 `;
 

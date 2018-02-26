@@ -6,9 +6,7 @@ import Header from '../components/Header'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title="Adam Barcan"
-    />
+    <Helmet title="Adam Barcan" />
     <Header />
     <div>
       {children()}
