@@ -1,12 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import Card from '../components/card';
+import Card from 'Components/card';
 
 const IndexPage = () => (
-  <Card
-    title="Fullstack developer from New York City"
-  >
+  <Card title="Fullstack developer from New York City">
     <p> 
       Elit laborum adipisicing pariatur exercitation aute ad commodo magna sit 
       laborum commodo minim ad dolore irure laboris aliqua veniam culpa occaecat 

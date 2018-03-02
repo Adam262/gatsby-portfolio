@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import { colors } from '../../styles/main'
+import { colors } from 'Styles/main'
 
 import styled, { ThemeProvider } from 'styled-components'
 import { cloneDeep, mapValues, findKey } from 'lodash';

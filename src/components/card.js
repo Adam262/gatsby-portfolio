@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled, { ThemeProvider } from 'styled-components'
-import { colors } from '../styles/main'
-import { fadeInUp } from '../styles/keyframes'
+import { colors } from 'Styles/main'
+import { fadeInUp } from 'Styles/keyframes'
 
 const StyledDiv = styled.div`
   margin: 5em;
   max-width: 50em;
   text-align: justify;
-  animation: ${fadeInUp} 1s linear;
+  animation: ${fadeInUp} 1.0s linear;
 `;
 
 const Card = ({title, children}) => { 
