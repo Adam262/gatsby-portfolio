@@ -12,15 +12,19 @@ const StyledDiv = styled.div`
   animation: ${fadeInUp} 1.0s linear;
 `;
 
-const Card = ({title, children}) => { 
+const Card = ({title, className, children}) => { 
   return (
     <ThemeProvider theme={colors}> 
-      <StyledDiv>
+      <StyledDiv className={className}>
         <h2> {title} </h2>
         { children }
       </StyledDiv>
     </ThemeProvider>
   )
 }
+
+Card.defultProps = {
+  className: ''
+};
 
 export default Card

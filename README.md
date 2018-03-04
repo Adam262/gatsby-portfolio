@@ -13,4 +13,6 @@ My goals with this project are:
 * I added `styled-components`, and am trying some advanced concepts such as `theme`;
 * I added `three.js` and want to try porting a geometry into a React component;
 * I want to play with GraphQL, which is built into Gatsby;
+* Form components are built with Google Material-UI
+* Form is submitted with Formspree
 

@@ -4,11 +4,17 @@ import Link from 'gatsby-link'
 import Card from "Components/card"
 import ContactForm from "Components/forms/contact"
 
+import styled from 'styled-components';
+
+const StyledCard = styled(Card)`
+  margin: 0 auto;
+`;
+
 const Contact = () => {
   return (
-    <Card title="Get in touch">
+    <StyledCard title="Get in touch">
       <ContactForm/>
-    </Card>
+    </StyledCard>
   );
 }
 

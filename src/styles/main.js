@@ -32,5 +32,6 @@ injectGlobal`
 export const colors = {
   black: 'black',
   white: 'white',
-  lightGrey: 'hsla(0,0%,100%,.2)',
+  darkGrey: 'hsla(0,0%,100%,.2)',
+  lightGrey: 'hsla(0,0%,100%,.8)',
 }

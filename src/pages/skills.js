@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Work = () => (
+const Skills = () => (
   <div>
-    <h1> Work </h1>
+    <h1> Skills </h1>
   </div>
 )
 
-export default Work
+export default Skills

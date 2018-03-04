@@ -12,7 +12,7 @@ const borderBottom = (noDecoration, isActive, colors) => {
     return 'inheirit';
   }
 
-  return isActive ? `2px solid ${colors.white}` : `2px solid ${colors.lightGrey}`;
+  return isActive ? `2px solid ${colors.white}` : `2px solid ${colors.darkGrey}`;
 }
 
 const Container = styled.div`
@@ -47,7 +47,7 @@ class Header extends React.Component {
 
     this.state = {
       links: {
-        work: { to: 'work', text: 'Work', active: false },
+        skills: { to: 'skills', text: 'Skills', active: false },
         about: { to: 'about', text: 'About', active: false },
         contact: { to: 'contact', text: 'Contact', active: false },
       }
@@ -75,7 +75,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const work = this.state.links.work;
+    const skills = this.state.links.skills;
     const about = this.state.links.about;
     const contact = this.state.links.contact;
 
@@ -94,11 +94,11 @@ class Header extends React.Component {
         
           <NavBar>
             <StyledLink 
-              active={ work.active }
-              onClick={ () => this.onClick("work") } 
-              to= { work.to }
+              active={ skills.active }
+              onClick={ () => this.onClick("skills") } 
+              to= { skills.to }
             > 
-              Work 
+              { skills.text } 
             </StyledLink>
 
             <StyledLink 
@@ -106,7 +106,7 @@ class Header extends React.Component {
               onClick={ () => this.onClick("about") } 
               to= { about.to }
             > 
-              About 
+              { about.text } 
             </StyledLink>
 
             <StyledLink 
@@ -114,7 +114,7 @@ class Header extends React.Component {
               onClick={ () => this.onClick("contact") } 
               to= { contact.to }
             > 
-              Contact 
+              { contact.text } 
             </StyledLink>
           </NavBar>
         </Container>
