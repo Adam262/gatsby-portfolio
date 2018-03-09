@@ -6,15 +6,11 @@ import Card from 'Components/card';
 const IndexPage = () => (
   <Card title="Fullstack developer from New York City">
     <p> 
-      Elit laborum adipisicing pariatur exercitation aute ad commodo magna sit 
-      laborum commodo minim ad dolore irure laboris aliqua veniam culpa occaecat 
-      magna amet fugiat dolore qui laboris veniam nisi id ex enim dolor et mollit 
-      fugiat in incididunt tempor ut aute cupidatat dolor minim cupidatat mollit magna 
-      cillum commodo nulla dolor magna dolor tempor officia deserunt nisi reprehenderit 
-      veniam irure culpa qui irure commodo ut eu in non nostrud irure et qui culpa consequat 
-      incididunt nulla mollit labore laboris enim ea officia deserunt et minim eiusmod sint mollit sed
-      esse fugiat ad non est consectetur id consequat voluptate voluptate eiusmod occaecat occaecat qui 
-      esse eiusmod consequat excepteur qui sunt sit dolore dolore voluptate quis consequat incididunt eu ut 
+      I'm a full-time software engineer at Greenhouse.io, where I build features in Ruby on Rails and React. 
+
+      With a strong background in automated testing, I value writing code that is well-tested, coherent, and maintainable. 
+
+      Outside of coding, I'm a lifelong competitive runner, and a photographer of sports and music events. 
      </p>
   </Card>
 )

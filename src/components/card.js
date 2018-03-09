@@ -6,7 +6,6 @@ import { colors } from 'Styles/main'
 import { fadeInUp } from 'Styles/keyframes'
 
 const StyledDiv = styled.div`
-  margin: 5em;
   max-width: 50em;
   text-align: justify;
   animation: ${fadeInUp} 1.0s linear;

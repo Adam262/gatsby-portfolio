@@ -87,7 +87,6 @@ class Header extends React.Component {
             noDecoration 
             onClick={ () => this.onClick("home") } 
             to="/" 
-            style={{ marginLeft: '5em' }}
           > 
             <h1> Adam Barcan </h1> 
           </StyledLink>
@@ -107,7 +106,7 @@ class Header extends React.Component {
               to= { about.to }
             > 
               { about.text } 
-            </StyledLink>
+            </StyledLink>   
 
             <StyledLink 
               active={ contact.active }

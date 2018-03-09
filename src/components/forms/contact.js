@@ -47,7 +47,7 @@ class ContactForm extends React.Component {
             primary
             backgroundColor={ colors.darkGrey }
             hoverColor={ colors.lightGrey }
-            style={{ display: "block", color: colors.white }}
+            style={{ display: "block", color: colors.white, marginTop: 10 }}
             label="Submit"
             type="submit"
           />     

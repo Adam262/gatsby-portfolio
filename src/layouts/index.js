@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Header from 'Components/header'
+import Footer from 'Components/footer';
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -17,6 +18,8 @@ const TemplateWrapper = ({ children }) => (
         {children()}
       </div>
     </MuiThemeProvider>
+
+    <Footer />
   </div>
 )
 

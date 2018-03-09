@@ -1,5 +1,12 @@
 import styled, { injectGlobal } from 'styled-components';
 
+const colors = {
+  black: 'black',
+  white: 'white',
+  darkGrey: 'hsla(0,0%,100%,.2)',
+  lightGrey: 'hsla(0,0%,100%,.8)',
+}
+
 injectGlobal`
   @font-face {
     font-family: 'Raleway';
@@ -13,25 +20,24 @@ injectGlobal`
     background: black;
     color: white;
     font-family: 'Raleway', Arial, sans-serif;
-    padding: '0px 1.0875rem 1.45rem',
-    paddingTop: 0,
-    margin: 0 auto;
+    margin: 0 0 0 5em;
     maxWidth: 960px;
+  }
+
+  p {
+    color: ${colors.lightGrey};
+    line-height: 1.4em;
+  }
+
+  h1, h2 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: ${colors.lightGrey};
   }
 
   h1 {
     max-width: 8em;
-    font-family: 'Open Sans', Arial, sans-serif;
-  }
-
-  h2 {
-    font-family: 'Open Sans', Arial, sans-serif;
   }
 `;
 
-export const colors = {
-  black: 'black',
-  white: 'white',
-  darkGrey: 'hsla(0,0%,100%,.2)',
-  lightGrey: 'hsla(0,0%,100%,.8)',
-}
+export { colors };
+
