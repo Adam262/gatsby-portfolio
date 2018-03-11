@@ -1,5 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import ExternalLink from 'Components/external_link';
+
+import { externalLinks } from '../constants.js'
 
 import Card from 'Components/card';
 
@@ -10,9 +12,11 @@ const IndexPage = () => (
 
       With a strong background in automated testing, I value writing code that is well-tested, coherent, and maintainable. 
 
-      Outside of coding, I'm a lifelong competitive runner, and a photographer of sports and music events. 
+      Outside of coding, I'm a lifelong competitive runner, and a
+      <ExternalLink href={externalLinks.photoPortfolio}>photographer</ExternalLink>
+      of sports and music events. 
      </p>
   </Card>
 )
 
-export default IndexPage
+export default IndexPage;

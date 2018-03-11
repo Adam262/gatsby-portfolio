@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from './link'
 import Helmet from 'react-helmet'
 
 import { colors } from 'Styles/main'
@@ -7,30 +7,11 @@ import { colors } from 'Styles/main'
 import styled, { ThemeProvider } from 'styled-components'
 import { cloneDeep, mapValues, findKey } from 'lodash';
 
-const borderBottom = (noDecoration, isActive, colors) => {
-  if (!!noDecoration) {
-    return 'inheirit';
-  }
-
-  return isActive ? `2px solid ${colors.white}` : `2px solid ${colors.darkGrey}`;
-}
-
 const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-top: 3em;
-`;
-
-const StyledLink = styled(Link)`
-  color: ${props => props.theme.white};
-  display: inline-block;
-  font-family: 'Raleway', Arial, sans-serif;
-  padding-bottom: 5px;
-  text-decoration: none;
-  border-bottom: ${props => borderBottom(props.noDecoration, props.active, props.theme)};
-  transition-property: border-bottom;
-  transition-duration: 1s;
 `;
 
 const NavBar = styled.nav`
@@ -83,38 +64,38 @@ class Header extends React.Component {
       <ThemeProvider theme={colors}>
         <Container> 
           <Helmet title={ this.activeTitle() } />
-          <StyledLink 
+          <Link 
             noDecoration 
             onClick={ () => this.onClick("home") } 
             to="/" 
           > 
             <h1> Adam Barcan </h1> 
-          </StyledLink>
+          </Link>
         
           <NavBar>
-            <StyledLink 
+            <Link 
               active={ skills.active }
               onClick={ () => this.onClick("skills") } 
               to= { skills.to }
             > 
               { skills.text } 
-            </StyledLink>
+            </Link>
 
-            <StyledLink 
+            <Link 
               active={ about.active }
               onClick={ () => this.onClick("about") } 
               to= { about.to }
             > 
               { about.text } 
-            </StyledLink>   
+            </Link>   
 
-            <StyledLink 
+            <Link 
               active={ contact.active }
               onClick={ () => this.onClick("contact") } 
               to= { contact.to }
             > 
               { contact.text } 
-            </StyledLink>
+            </Link>
           </NavBar>
         </Container>
       </ThemeProvider>

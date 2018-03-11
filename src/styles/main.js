@@ -29,7 +29,12 @@ injectGlobal`
     line-height: 1.4em;
   }
 
-  h1, h2 {
+  li {
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  h1, h2, h3, span {
     font-family: 'Open Sans', Arial, sans-serif;
     color: ${colors.lightGrey};
   }

@@ -39,6 +39,7 @@ export const TextField = ({name, label, inline, ...rest}) => {
 TextField.propTypes = {
   name: PropTypes.string,
   label: PropTypes.string,
+  inline: PropTypes.bool,
 }
 
 export const FormGroup = styled.div`

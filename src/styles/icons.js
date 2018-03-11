@@ -6,6 +6,9 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faCopyright } from '@fortawesome/fontawesome-free-solid'
 import brands from '@fortawesome/fontawesome-free-brands'
 
+import devicon from 'devicon';
+import 'Styles/devicon/devicon.css';
+
 import { colors } from 'Styles/main'
 import styled, { ThemeProvider } from 'styled-components'
 
@@ -45,3 +48,12 @@ export const IconLink = ({href, faClass}) => {
 }
 
 export const Copyright = ({style}) => <Icon style={style} component={faCopyright}/>;
+
+export const IconReact = () =>  <i className="devicon-react-plain"> <span> React </span> </i>
+export const IconJs = () =>  <i className="devicon-javascript-plain"> <span> Javascript (ES6) </span> </i>
+export const IconWebpack = () =>  <i className="devicon-webpack-plain"> <span> Webpack </span> </i>
+
+export const IconRails = () =>  <i className="devicon-rails-plain"> <span> Rails 4 </span> </i>
+export const IconDocker = () =>  <i className="devicon-docker-plain"> <span> Docker </span> </i>
+export const IconPostGresQL = () =>  <i className="devicon-postgresql-plain"> <span> PostgresQL </span> </i>
+export const IconPython = () =>  <i className="devicon-python-plain"> <span> Python </span> </i>
