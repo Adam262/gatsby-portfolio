@@ -5,3 +5,5 @@ export const externalLinks = {
   medium: 'https://medium.com/@adambarcan',
   photoPortfolio: 'https://photo.adambarcan.com',
 }
+
+export const myEmail = "hello@adambarcan.com"

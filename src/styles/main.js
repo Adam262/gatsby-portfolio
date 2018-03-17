@@ -3,7 +3,7 @@ import styled, { injectGlobal } from 'styled-components';
 const colors = {
   black: 'black',
   white: 'white',
-  darkGrey: 'hsla(0,0%,100%,.2)',
+  darkGrey: 'hsla(0,0%,100%,.4)',
   lightGrey: 'hsla(0,0%,100%,.8)',
 }
 
@@ -25,8 +25,12 @@ injectGlobal`
   }
 
   p {
-    color: ${colors.lightGrey};
+    color: ${colors.darkGrey};
     line-height: 1.4em;
+  }
+
+  ul {
+    padding-left: 0;
   }
 
   li {
@@ -35,6 +39,7 @@ injectGlobal`
   }
 
   h1, h2, h3, span {
+    font-weight: 300;
     font-family: 'Open Sans', Arial, sans-serif;
     color: ${colors.lightGrey};
   }

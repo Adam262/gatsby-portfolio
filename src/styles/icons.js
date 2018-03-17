@@ -53,7 +53,11 @@ export const IconReact = () =>  <i className="devicon-react-plain"> <span> React
 export const IconJs = () =>  <i className="devicon-javascript-plain"> <span> Javascript (ES6) </span> </i>
 export const IconWebpack = () =>  <i className="devicon-webpack-plain"> <span> Webpack </span> </i>
 
-export const IconRails = () =>  <i className="devicon-rails-plain"> <span> Rails 4 </span> </i>
-export const IconDocker = () =>  <i className="devicon-docker-plain"> <span> Docker </span> </i>
+export const IconRails = () =>  <i className="devicon-rails-plain"> <span> Ruby on Rails </span> </i>
 export const IconPostGresQL = () =>  <i className="devicon-postgresql-plain"> <span> PostgresQL </span> </i>
+export const IconRedis = () =>  <i className="devicon-redis-plain"> <span> Redis </span> </i>
+export const IconDocker = () =>  <i className="devicon-docker-plain"> <span> Docker </span> </i>
 export const IconPython = () =>  <i className="devicon-python-plain"> <span> Python </span> </i>
+
+export const IconGit = () =>  <i className="devicon-git-plain"> <span> Git </span> </i>
+

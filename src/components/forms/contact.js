@@ -6,11 +6,11 @@ import FlatButton from 'material-ui/FlatButton';
 import styled, { ThemeProvider } from 'styled-components'
 import { colors } from 'Styles/main'
 
-class ContactForm extends React.Component {
+class ContactForm extends React.Component { 
   render() {
     return(
       <ThemeProvider theme={colors}>
-        <form style={{ width: 60 + 'em' }}
+        <form style={{ width: '60em' }}
           action="https://formspree.io/hello@adambarcan.com"
           method="POST"
         >

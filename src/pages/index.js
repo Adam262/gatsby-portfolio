@@ -8,7 +8,7 @@ import Card from 'Components/card';
 const IndexPage = () => (
   <Card title="Fullstack developer from New York City">
     <p> 
-      I'm a full-time software engineer at Greenhouse.io, where I build features in Ruby on Rails and React. 
+      I'm a full-time software engineer at Greenhouse.io, where I build full stack features in Ruby on Rails and React. 
 
       With a strong background in automated testing, I value writing code that is well-tested, coherent, and maintainable. 
 

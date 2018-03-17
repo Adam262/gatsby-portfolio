@@ -1,20 +1,20 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import ExternalLink from 'Components/external_link';
+
+import { myEmail } from '../constants.js'
 
 import Card from "Components/card"
 import ContactForm from "Components/forms/contact"
 
 import styled from 'styled-components';
 
-const StyledCard = styled(Card)`
-  margin: 0 auto;
-`;
-
 const Contact = () => {
   return (
-    <StyledCard title="Get in touch">
+    <Card title="Let's talk">
+      <p> Reach out to talk coding, photograpny or running or just to say hello</p>
+      <p> My personal email is <ExternalLink href={`mailto:${myEmail}`}>hello@adambarcan.com</ExternalLink> </p>
       <ContactForm/>
-    </StyledCard>
+    </Card>
   );
 }
 

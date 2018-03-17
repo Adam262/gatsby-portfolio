@@ -2,13 +2,23 @@ import React from 'react'
 
 import Card from 'Components/card'
 
-import { IconReact, IconJs, IconWebpack, IconRails, IconDocker, IconPostGresQL, IconPython } from 'Styles/icons'
+import { 
+  IconReact,
+  IconJs,
+  IconWebpack,
+  IconRails,
+  IconDocker,
+  IconPostGresQL,
+  IconRedis,
+  IconPython,
+  IconGit 
+} from 'Styles/icons'
 
-const Divider = () => <span style={{ display: 'inline-block', paddingLeft: '1em' }}> ● </span> 
+const Divider = () => <span style={{ display: 'inline-block', paddingLeft: '1em', paddingRight: '1em' }}> ● </span> 
 
 const SkillSet = ({title, skills}) => {
   return (
-    <div style={{ marginLeft: '5em' }}>
+    <div style={{ marginLeft: '5em', marginTop: '5em' }}>
       <h3> { title } </h3>
       <ul> 
         { 
@@ -30,7 +40,10 @@ const SkillSet = ({title, skills}) => {
 const Skills = () => (
     <Card title="Skills">
     
-    { <SkillSet title="FrontEnd" skills={[<IconReact/>, <IconJs/>, <IconWebpack/>]} /> }
+    { <SkillSet title="JS Ecosystem" skills={[<IconReact/>, <IconJs/>, <IconWebpack/>, <span> Styled Components </span>]} /> }
+    { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconPostGresQL/>, <IconRedis/>, <span> Sidekiq </span>, <span> Rspec </span>]} /> }
+    { <SkillSet title="CI / CD" skills={[<IconDocker/>, <span> Jenkins </span>, <span> Solano </span>]} /> }
+    { <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> QA </span>, <span> Agile / Kanban </span>, <span> Jira </span>]} /> }
 
   </Card>
 )
