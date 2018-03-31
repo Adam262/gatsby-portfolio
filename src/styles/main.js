@@ -1,10 +1,15 @@
 import styled, { injectGlobal } from 'styled-components';
 
-const colors = {
+export const colors = {
   black: 'black',
   white: 'white',
-  darkGrey: 'hsla(0,0%,100%,.4)',
-  lightGrey: 'hsla(0,0%,100%,.8)',
+  darkGrey: 'hsla(0,0%,100%, .4)',
+  lightGrey: 'hsla(0,0%,100%, .8)',
+  turquoise: '#42D3DB'
+};
+
+export const breakPoints = {
+  mobile: '768px'
 }
 
 injectGlobal`
@@ -21,12 +26,13 @@ injectGlobal`
     color: white;
     font-family: 'Raleway', Arial, sans-serif;
     margin: 0 0 0 5em;
-    maxWidth: 960px;
   }
 
   p {
     color: ${colors.darkGrey};
     line-height: 1.4em;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   ul {
@@ -47,7 +53,19 @@ injectGlobal`
   h1 {
     max-width: 8em;
   }
+
+  @media (max-width: ${breakPoints.mobile}) {
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      max-width: 300px;
+    }
+  }
 `;
-
-export { colors };
-

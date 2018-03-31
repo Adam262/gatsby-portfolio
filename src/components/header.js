@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './link'
 import Helmet from 'react-helmet'
 
-import { colors } from 'Styles/main'
+import { breakPoints, colors } from 'Styles/main'
 
 import styled, { ThemeProvider } from 'styled-components'
 import { cloneDeep, mapValues, findKey } from 'lodash';
@@ -12,6 +12,14 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 3em;
+
+  @media (max-width: ${breakPoints.mobile}) {
+    a {
+      font-size: 14px;
+      margin: 0 20% 0 0;
+      display: inline-block;
+    }
+  }
 `;
 
 const NavBar = styled.nav`

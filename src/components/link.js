@@ -15,7 +15,7 @@ const borderBottom = (noDecoration, isActive, colors) => {
   return isActive ? `2px solid ${colors.white}` : `2px solid ${colors.darkGrey}`;
 }
 
-const LinkWithTheme = ({...props}) => {
+const LinkWithTheme = ({noDecoration, active, ...props}) => {
   return <ThemeProvider theme={colors}>
     <_Link {...props}/>
   </ThemeProvider>
