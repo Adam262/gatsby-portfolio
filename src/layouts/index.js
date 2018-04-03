@@ -9,7 +9,7 @@ import Header from 'Components/header'
 import Footer from 'Components/footer';
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div id="container">
     <Helmet title="Adam Barcan" />
     <Header />
 

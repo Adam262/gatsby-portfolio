@@ -3,8 +3,9 @@ import React from 'react'
 import { FormGroup, TextField }  from './form_fields';
 import FlatButton from 'material-ui/FlatButton';
 
-import styled, { ThemeProvider } from 'styled-components'
-import { colors } from 'Styles/main'
+import styled, { ThemeProvider } from 'styled-components';
+import { breakPoints, colors } from 'Styles/main';
+import { isMobile } from 'Root/utils';
 
 class ContactForm extends React.Component { 
   render() {
@@ -17,15 +18,18 @@ class ContactForm extends React.Component {
           <input type="hidden" name="_next" value="/contact" />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-          <FormGroup justify>
+          <FormGroup 
+            justify={!isMobile()}>
             <TextField
-              inline
+              fullWidth={isMobile()}
+              inline={!isMobile()}
               name="full_name"
               label="Full Name"
             />
      
             <TextField
-              inline
+              fullWidth={isMobile()}
+              inline={!isMobile()}
               name="email"
               type="email"
               label="Email"

@@ -8,7 +8,6 @@ import ContactForm from "Components/forms/contact"
 
 import styled from 'styled-components';
 
-
 const About = () => (
   <div>
     <Card title="About Me">

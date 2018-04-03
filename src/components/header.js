@@ -13,10 +13,10 @@ const Container = styled.div`
   justify-content: space-between;
   margin-top: 3em;
 
-  @media (max-width: ${breakPoints.mobile}) {
+  @media (max-width: ${breakPoints.tablet}) {
     a {
       font-size: 14px;
-      margin: 0 20% 0 0;
+      margin: 0 10% 0 0;
       display: inline-block;
     }
   }
@@ -26,7 +26,7 @@ const NavBar = styled.nav`
   display: flex;
   float: right;
   justify-content: space-between;
-  margin-right: 20em;
+  margin-right: 15em;
   width: 15em;
 `;
 

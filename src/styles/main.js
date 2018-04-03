@@ -9,7 +9,10 @@ export const colors = {
 };
 
 export const breakPoints = {
-  mobile: '768px'
+  mobile: '320px',
+  mobileLandscape: '480px',
+  tablet: '768px',
+  tabletLandscape: '1024px',
 }
 
 injectGlobal`
@@ -24,8 +27,13 @@ injectGlobal`
   body {
     background: black;
     color: white;
+  }
+
+  #container {
     font-family: 'Raleway', Arial, sans-serif;
     margin: 0 0 0 5em;
+    max-width: ${breakPoints.tabletLandscape};
+    margin: 0 auto;
   }
 
   p {
@@ -51,21 +59,26 @@ injectGlobal`
   }
 
   h1 {
-    max-width: 8em;
+    width: 8em;
   }
 
-  @media (max-width: ${breakPoints.mobile}) {
+  @media (max-width: ${breakPoints.tablet}) {
+    #container {
+      margin: 0 5%;
+      overflow: hidden;
+    }
+
     h1 {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     h2 {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     p {
       font-size: 14px;
-      max-width: 300px;
+      max-width: 25em;
     }
   }
 `;

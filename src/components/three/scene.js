@@ -1,6 +1,7 @@
 import React from "react";
 import * as THREE from "three";
-import { colors } from "Styles/main";
+import { colors, breakPoints } from "Styles/main";
+import { parsePx } from "Root/utils";
 
 class Scene extends React.Component {
     static aspectRatio = window.innerWidth / window.innerHeight;
@@ -9,8 +10,14 @@ class Scene extends React.Component {
         super(props);
 
         const renderer = new THREE.WebGLRenderer();
-        renderer.setSize( window.innerWidth, window.innerHeight );
+
+         if (window.innerWidth > parsePx(breakPoints.tablet)) {
+            renderer.setSize( window.innerWidth - 350, window.innerHeight );
+        } else {
+            renderer.setSize( window.innerWidth, window.innerHeight );
+        }
         
+
         this.state = { renderer };
     }
 
@@ -20,8 +27,13 @@ class Scene extends React.Component {
 
     setCamera() {
         const camera = new THREE.PerspectiveCamera( 75, Scene.aspectRatio, 0.1, 1000 );
-        camera.position.set( 25, -25, 100 );
-        
+
+        if (window.innerWidth > parsePx(breakPoints.tablet)) {
+            camera.position.set( 25, -25, 100 );
+        } else {
+            camera.position.set( 25, -75, 200 );
+        }
+
         return camera;
     }
 
@@ -65,7 +77,7 @@ class Scene extends React.Component {
 
     render() {
         return (
-            <div 
+            <div
                 ref={node => this.threeCanvas = node} 
                 style = {{ width: '100%', height: '100%' }} 
             />

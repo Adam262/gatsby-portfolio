@@ -7,10 +7,15 @@ import Card from "Components/card"
 import ContactForm from "Components/forms/contact"
 
 import styled from 'styled-components';
+import { breakPoints } from 'Styles/main';
 
 const StyledCard = styled(Card)`
   display: inline-block;
   width: 50%;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    width: 100%;
+  }
 `;
 
 const Contact = () => {

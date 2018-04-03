@@ -9,16 +9,21 @@ import brands from '@fortawesome/fontawesome-free-brands'
 import devicon from 'devicon';
 import 'Styles/devicon/devicon.css';
 
-import { colors } from 'Styles/main'
+import { colors, breakPoints } from 'Styles/main'
 import styled, { ThemeProvider } from 'styled-components'
 
 const IconWithHover = styled(FontAwesomeIcon)`
-  padding: 0 2em;
+  padding: 0 1.5em;
   font-size: 1.3em;
   color: ${props => props.colors.lightGrey};
 
   &:hover {
     color: ${props => props.colors.white};
+  }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    padding: 0 0.5em;
+    font-size: 1em;
   }
 `;
 
@@ -27,12 +32,10 @@ const PlainIcon = styled(FontAwesomeIcon)`
   color: ${props => props.colors.lightGrey};
 `;
 
-const Icon = ({component, style}) => {
+const Icon = ({component}) => {
   return (
     <ThemeProvider theme={colors}>
-      <div style={ Object.assign({}, style, { display: 'inline-block' }) }>
         <PlainIcon colors={colors} icon={component}/>
-      </div>
     </ThemeProvider>
   );
 }
@@ -47,7 +50,7 @@ export const IconLink = ({href, faClass}) => {
   );
 }
 
-export const Copyright = ({style}) => <Icon style={style} component={faCopyright}/>;
+export const Copyright = () => <Icon component={faCopyright}/>;
 
 export const IconReact = () =>  <i className="devicon-react-plain"> <span> React </span> </i>
 export const IconJs = () =>  <i className="devicon-javascript-plain"> <span> Javascript (ES6) </span> </i>

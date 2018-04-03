@@ -18,7 +18,7 @@ const Divider = () => <span style={{ display: 'inline-block', paddingLeft: '1em'
 
 const SkillSet = ({title, skills}) => {
   return (
-    <div style={{ marginLeft: '5em', marginTop: '4em' }}>
+    <div style={{ marginTop: '3em' }}>
       <h3> { title } </h3>
       <ul> 
         { 
