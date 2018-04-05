@@ -5,5 +5,9 @@ export const parsePx = (value) => {
 }
 
 export const isMobile = () => {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  
   return window.innerWidth < parsePx(breakPoints.tablet);
 }

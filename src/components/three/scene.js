@@ -4,21 +4,10 @@ import { colors, breakPoints } from "Styles/main";
 import { parsePx } from "Root/utils";
 
 class Scene extends React.Component {
-    static aspectRatio = window.innerWidth / window.innerHeight;
-
     constructor(props) {
         super(props);
 
-        const renderer = new THREE.WebGLRenderer();
-
-         if (window.innerWidth > parsePx(breakPoints.tablet)) {
-            renderer.setSize( window.innerWidth - 350, window.innerHeight );
-        } else {
-            renderer.setSize( window.innerWidth, window.innerHeight );
-        }
-        
-
-        this.state = { renderer };
+        this.state = { renderer: null };
     }
 
     shouldComponentUpdate() {
@@ -26,7 +15,7 @@ class Scene extends React.Component {
     }
 
     setCamera() {
-        const camera = new THREE.PerspectiveCamera( 75, Scene.aspectRatio, 0.1, 1000 );
+        const camera = new THREE.PerspectiveCamera( 75, (window.innerWidth / window.innerHeight), 0.1, 1000 );
 
         if (window.innerWidth > parsePx(breakPoints.tablet)) {
             camera.position.set( 25, -25, 100 );
@@ -50,7 +39,15 @@ class Scene extends React.Component {
     }
 
     componentDidMount() {
-        const renderer = this.state.renderer;
+        const renderer = new THREE.WebGLRenderer();
+
+        if (window.innerWidth > parsePx(breakPoints.tablet)) {
+            renderer.setSize( window.innerWidth - 350, window.innerHeight );
+        } else {
+            renderer.setSize( window.innerWidth, window.innerHeight );
+        }
+
+        this.setState({ renderer });
         this.threeCanvas.appendChild(renderer.domElement);
         
         const camera = this.setCamera();
