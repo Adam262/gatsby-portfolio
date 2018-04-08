@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { IconLink } from 'Styles/icons'
 
 import { colors } from 'Styles/main'
-import { externalLinks } from '../constants.js'
+import { externalLinks } from 'Root/constants.js'
 import styled, { ThemeProvider } from 'styled-components'
 
 const SocialNavbar = () => {
@@ -14,6 +14,7 @@ const SocialNavbar = () => {
       <IconLink href={externalLinks.linkedin} faClass="linkedin"/>
       <IconLink href={externalLinks.instagram} faClass="instagram"/>
       <IconLink href={externalLinks.medium} faClass="medium"/>
+      <IconLink href={externalLinks.strava} faClass="strava"/>
     </div>
   );
 }

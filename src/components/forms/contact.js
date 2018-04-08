@@ -15,7 +15,7 @@ class ContactForm extends React.Component {
           action="https://formspree.io/hello@adambarcan.com"
           method="POST"
         >
-          <input type="hidden" name="_next" value="/contact" />
+          <input type="hidden" name="_next" value="/" />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
 
           <FormGroup 

@@ -19,17 +19,13 @@ const About = () => (
         <br/>
         <br/>
 
-        I also have a regular rotation as a product support engineer. About once a month, I handle tickets for customers with issues escalted by our chat support team. 
+        I also have a regular rotation as a product support engineer. About once a month, I handle tickets for customers with issues escalated by our chat support team. 
 
         <br/>
         <br/>
 
         I am a graduate of Fullstack Academy of Code, an immersive coding bootcamp based in NYC. Before my transition to programming, I earned a master's degree in international affairs and economics from Columbia University.
       </p>
-    </Card> 
-
-    <Card title="Projects">
-      
     </Card> 
 
     <Card title="">

@@ -41,7 +41,7 @@ const Skills = () => (
     <Card title="Skills">
     
     { <SkillSet title="JS Ecosystem" skills={[<IconReact/>, <IconJs/>, <IconWebpack/>, <span> Styled Components </span>]} /> }
-    { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconPostGresQL/>, <IconRedis/>, <span> Sidekiq </span>, <span> Rspec </span>]} /> }
+    { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconPostGresQL/>, <IconRedis/>, <span> GraphQL API backend </span>, <span> Sidekiq </span>, <span> Rspec </span>]} /> }
     { <SkillSet title="CI / CD" skills={[<IconDocker/>, <span> Jenkins </span>, <span> Solano </span>]} /> }
     { <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> QA </span>, <span> Agile / Kanban </span>, <span> Jira </span>]} /> }
 
