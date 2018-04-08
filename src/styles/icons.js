@@ -3,7 +3,6 @@ import React from 'react'
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
-import { faCopyright } from '@fortawesome/fontawesome-free-solid'
 import brands from '@fortawesome/fontawesome-free-brands'
 
 import devicon from 'devicon';
@@ -14,7 +13,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 const IconWithHover = styled(FontAwesomeIcon)`
   padding: 0 1.5em;
-  font-size: 1.3em;
+  font-size: 20px;
   color: ${props => props.colors.lightGrey};
 
   &:hover {
@@ -23,13 +22,17 @@ const IconWithHover = styled(FontAwesomeIcon)`
 
   @media (max-width: ${breakPoints.tablet}) {
     padding: 0 0.5em;
-    font-size: 1em;
+    font-size: 15px;
   }
 `;
 
 const PlainIcon = styled(FontAwesomeIcon)`
-  font-size: 1.3em;
+  font-size: 20px;
   color: ${props => props.colors.lightGrey};
+
+  @media (max-width: ${breakPoints.tablet}) {
+    font-size: 15px;
+  }
 `;
 
 const Icon = ({component}) => {
@@ -49,8 +52,6 @@ export const IconLink = ({href, faClass}) => {
     </ThemeProvider>
   );
 }
-
-export const Copyright = () => <Icon component={faCopyright}/>;
 
 export const IconReact = () =>  <i className="devicon-react-plain"> <span> React </span> </i>
 export const IconJs = () =>  <i className="devicon-javascript-plain"> <span> Javascript (ES6) </span> </i>

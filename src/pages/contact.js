@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <div>
       <StyledCard title="Let's talk">
-        <p> Reach out to talk coding, photograpny or running or just to say hello</p>
+        <p> Reach out to talk coding, photography or running or just to say hello</p>
         <p> My personal email is <ExternalLink href={`mailto:${myEmail}`}>hello@adambarcan.com</ExternalLink> </p>
         <ContactForm/>
       </StyledCard>

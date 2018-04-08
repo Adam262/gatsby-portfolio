@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import SocialNavbar from './social_navbar';
 
 import { breakPoints, colors } from 'Styles/main';
-import { Copyright } from 'Styles/icons';
 import styled, { ThemeProvider } from 'styled-components';
 
 const StyledFooter = styled.div`
@@ -12,12 +11,16 @@ const StyledFooter = styled.div`
   position: fixed;
   bottom: 2em;
   display: flex;
+
+  @media (max-width: ${breakPoints.tabletLandscape}) {
+    width: 100%;
+  }
 `;
 
 const CopyrightContainer = styled.div`
   width: 50%;
 
-  @media (max-width: ${breakPoints.tablet}) {
+  @media (max-width: ${breakPoints.tabletLandscape}) {
     width: 100%;
   }
 `;
@@ -25,10 +28,10 @@ const CopyrightContainer = styled.div`
 const SocialContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  width: 35%;
-  margin-right: 15%;
+  width: 40%;
+  margin-right: 10%;
 
-  @media (max-width: ${breakPoints.tablet}) {
+  @media (max-width: ${breakPoints.tabletLandscape}) {
     display: block;
     margin: 0;
     width: 100%;
@@ -42,8 +45,8 @@ const Footer = () => {
     <StyledFooter>  
       <CopyrightContainer> 
         <div>
-          <Copyright/>
-          <div  style={{ display: 'inline-block', paddingLeft: '1em' }}> 
+          <span style={{ color: colors.darkGrey }}> &copy; </span>
+          <div style={{ display: 'inline-block', paddingLeft: 5 }}> 
             <p style={{ margin: 0 }}> { currentYear() } Adam Barcan </p>
           </div>
         </div> 

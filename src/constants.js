@@ -3,6 +3,7 @@ export const externalLinks = {
   linkedin: 'https://www.linkedin.com/in/adambarcan/',
   instagram: 'https://www.instagram.com/barcanshoot/',
   medium: 'https://medium.com/@adambarcan',
+  strava: 'https://www.strava.com/athletes/3953675',
   photoPortfolio: 'https://photo.adambarcan.com',
 }
 
