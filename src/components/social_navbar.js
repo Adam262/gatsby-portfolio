@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { IconLink } from 'Styles/icons'
+import { IconLink, Icon } from 'Styles/icons'
 
 import { colors } from 'Styles/main'
 import { externalLinks } from 'Root/constants.js'

@@ -43,7 +43,7 @@ class ContactForm extends React.Component {
               fullWidth
               name="message"
               label="Message"
-              rows={5}
+              rows={ isMobile() ? 2 : 5}
             />  
           </FormGroup>
 

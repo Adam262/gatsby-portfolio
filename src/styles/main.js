@@ -27,6 +27,7 @@ injectGlobal`
   body {
     background: black;
     color: white;
+    overflow: hidden;
   }
 
   canvas {
@@ -43,7 +44,7 @@ injectGlobal`
     margin: 0 auto;
   }
 
-  p {
+  p, span {
     color: ${colors.darkGrey};
     line-height: 1.4em;
     text-align: justify;
@@ -59,7 +60,7 @@ injectGlobal`
     list-style-type: none;
   }
 
-  h1, h2, h3, span {
+  h1, h2, h3 {
     font-weight: 300;
     font-family: 'Open Sans', Arial, sans-serif;
     color: ${colors.lightGrey};
@@ -86,6 +87,10 @@ injectGlobal`
     p, li {
       font-size: 14px;
       max-width: 25em;
+    }
+
+    canvas {
+      max-height: 300px;
     }
   }
 `;

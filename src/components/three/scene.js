@@ -81,7 +81,8 @@ class Scene extends React.Component {
                     height: '100%', 
                     marginLeft: 'auto',
                     marginRight: 'auto',
-                    textAlign: 'center' 
+                    textAlign: 'center',
+                    display: 'flex' 
                 }} 
             />
         )

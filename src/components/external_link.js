@@ -8,15 +8,16 @@ const Link = styled.a`
   font-family: 'Raleway', Arial, sans-serif;
   padding-left: 5px;
   padding-right: 5px;
+  text-decoration: ${props => props.noUnderline ? 'none' : 'inheirit' };
 
   &:hover {
     color: ${colors.white};
   }
 `;
 
-const ExternalLink = ({href, children}) => {
+const ExternalLink = ({noUnderline, href, children}) => {
   return <ThemeProvider theme={colors}>
-    <Link colors={colors} href={href} target="_blank">
+    <Link noUnderline={noUnderline} colors={colors} href={href} target="_blank">
       {children}
     </Link>
   </ThemeProvider>

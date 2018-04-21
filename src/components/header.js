@@ -7,11 +7,15 @@ import { breakPoints, colors } from 'Styles/main'
 import styled, { ThemeProvider } from 'styled-components'
 import { cloneDeep, mapValues, findKey } from 'lodash';
 
+import ExternalLink from 'Components/external_link';
+import { externalLinks } from '../constants.js'
+import { IconCamera } from 'Styles/icons'
+
 const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 3em;
+  margin-top: 2em;
 
   @media (max-width: ${breakPoints.tablet}) {
     display: block;
@@ -111,6 +115,9 @@ class Header extends React.Component {
             > 
               { contact.text } 
             </Link>
+
+            <ExternalLink noUnderline href={externalLinks.photoPortfolio}> <IconCamera/> </ExternalLink>
+
           </NavBar>
         </Container>
       </ThemeProvider>

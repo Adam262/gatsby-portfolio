@@ -1,5 +1,4 @@
 import React from 'react'
-import ExternalLink from 'Components/external_link';
 
 import { myEmail } from '../constants.js'
 
@@ -8,6 +7,8 @@ import ContactForm from "Components/forms/contact"
 
 import styled from 'styled-components';
 import { breakPoints } from 'Styles/main';
+
+import { isMobile } from 'Root/utils';
 
 const StyledCard = styled(Card)`
   display: inline-block;
@@ -22,8 +23,7 @@ const Contact = () => {
   return (
     <div>
       <StyledCard title="Let's talk">
-        <p> Reach out to talk coding, photography or running or just to say hello</p>
-        <p> My personal email is <ExternalLink href={`mailto:${myEmail}`}>hello@adambarcan.com</ExternalLink> </p>
+        { !isMobile() && <p> Reach out to talk coding, photography or running or just to say hello</p> }
         <ContactForm/>
       </StyledCard>
     </div>

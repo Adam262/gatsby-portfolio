@@ -2,6 +2,7 @@ import React from 'react'
 
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faCamera from '@fortawesome/fontawesome-free-solid/faCamera'
 
 import brands from '@fortawesome/fontawesome-free-brands'
 
@@ -35,10 +36,10 @@ const PlainIcon = styled(FontAwesomeIcon)`
   }
 `;
 
-const Icon = ({component}) => {
+export const Icon = ({faClass}) => {
   return (
     <ThemeProvider theme={colors}>
-        <PlainIcon colors={colors} icon={component}/>
+        <PlainIcon colors={colors} icon={faClass}/>
     </ThemeProvider>
   );
 }
@@ -64,4 +65,5 @@ export const IconDocker = () =>  <i className="devicon-docker-plain"> <span> Doc
 export const IconPython = () =>  <i className="devicon-python-plain"> <span> Python </span> </i>
 
 export const IconGit = () =>  <i className="devicon-git-plain"> <span> Git </span> </i>
+export const IconCamera = () => <FontAwesomeIcon icon={faCamera}/>
 

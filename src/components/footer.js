@@ -7,18 +7,20 @@ import { breakPoints, colors } from 'Styles/main';
 import styled, { ThemeProvider } from 'styled-components';
 
 const StyledFooter = styled.div`
-  width: ${breakPoints.tabletLandscape};
+  width: 75%;
   position: fixed;
   bottom: 2em;
   display: flex;
 
   @media (max-width: ${breakPoints.tabletLandscape}) {
+    bottom: 0;
     display: block;
+    width: 100%;
   }
 `;
 
 const CopyrightContainer = styled.div`
-  width: 100%;
+  width: 50%;
 
   @media (max-width: ${breakPoints.tabletLandscape}) {
     margin: 2% auto 0;
@@ -29,12 +31,12 @@ const SocialContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 40%;
-  margin-right: 10%;
+  margin-right: 15em;
 
   @media (max-width: ${breakPoints.tabletLandscape}) {
     display: block;
     margin: 2% auto;
-    width: 100%;
+    width: 50%;
   }
 `;
 
