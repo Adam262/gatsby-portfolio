@@ -74,9 +74,15 @@ class Scene extends React.Component {
 
     render() {
         return (
-            <div
+            <div 
                 ref={node => this.threeCanvas = node} 
-                style = {{ width: '100%', height: '100%' }} 
+                style = {{ 
+                    width: '100%', 
+                    height: '100%', 
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    textAlign: 'center' 
+                }} 
             />
         )
     }

@@ -11,8 +11,13 @@ My goals with this project are:
 
 * The site is built in Gatsby using the default Gatsby starter;
 * I added `styled-components`, and am trying some advanced concepts such as `theme`;
-* I added `three.js` and want to try porting a geometry into a React component;
-* I want to play with GraphQL, which is built into Gatsby;
+* I added `three.js` and built a simple scene. I liked the flexibility of the original Node module, so I ported it to React; 
 * Form components are built with Google Material-UI
 * Form is submitted with Formspree
+* There is some overriding of the webpack config to allow path aliasing. This removes brittle relative paths. 
+
+
+### To Do
+* Show my running data in this site via a charting library
+* To do this, I first need to build a separate app that scrapes data from different websites of running results 
 

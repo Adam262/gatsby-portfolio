@@ -29,6 +29,10 @@ const IconWithHover = styled(FontAwesomeIcon)`
 const PlainIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
   color: ${props => props.colors.lightGrey};
+
+  @media (max-width: ${breakPoints.tablet}) {
+    font-size: 15px;
+  }
 `;
 
 const Icon = ({component}) => {

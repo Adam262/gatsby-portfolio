@@ -14,12 +14,11 @@ const StyledFooter = styled.div`
 
   @media (max-width: ${breakPoints.tabletLandscape}) {
     display: block;
-    width: 100%;
   }
 `;
 
 const CopyrightContainer = styled.div`
-  width: 50%;
+  width: 100%;
 
   @media (max-width: ${breakPoints.tabletLandscape}) {
     margin: 2% auto 0;
@@ -35,7 +34,7 @@ const SocialContainer = styled.div`
   @media (max-width: ${breakPoints.tabletLandscape}) {
     display: block;
     margin: 2% auto;
-    width: 50%;
+    width: 100%;
   }
 `;
 

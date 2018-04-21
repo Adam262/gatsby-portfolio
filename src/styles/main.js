@@ -29,6 +29,13 @@ injectGlobal`
     color: white;
   }
 
+  canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+  }
+
   #container {
     font-family: 'Raleway', Arial, sans-serif;
     margin: 0 0 0 5em;
