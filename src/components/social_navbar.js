@@ -14,7 +14,6 @@ const SocialNavbar = () => {
       <IconLink href={externalLinks.linkedin} faClass="linkedin"/>
       <IconLink href={externalLinks.instagram} faClass="instagram"/>
       <IconLink href={externalLinks.medium} faClass="medium"/>
-      <IconLink href={externalLinks.strava} faClass="strava"/>
     </div>
   );
 }

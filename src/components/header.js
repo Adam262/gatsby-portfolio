@@ -14,6 +14,8 @@ const Container = styled.div`
   margin-top: 3em;
 
   @media (max-width: ${breakPoints.tablet}) {
+    display: block;
+    text-align: center;
     a {
       font-size: 14px;
       margin: 0 10% 0 0;
@@ -28,6 +30,11 @@ const NavBar = styled.nav`
   justify-content: space-between;
   margin-right: 15em;
   width: 15em;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    width: 100%;
+    margin: 5% auto;  
+  }
 `;
 
 class Header extends React.Component {

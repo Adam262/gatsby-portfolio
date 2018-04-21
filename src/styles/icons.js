@@ -22,17 +22,13 @@ const IconWithHover = styled(FontAwesomeIcon)`
 
   @media (max-width: ${breakPoints.tablet}) {
     padding: 0 0.5em;
-    font-size: 15px;
+    font-size: 18px;
   }
 `;
 
 const PlainIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
   color: ${props => props.colors.lightGrey};
-
-  @media (max-width: ${breakPoints.tablet}) {
-    font-size: 15px;
-  }
 `;
 
 const Icon = ({component}) => {

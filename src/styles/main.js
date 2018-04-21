@@ -76,7 +76,7 @@ injectGlobal`
       font-size: 16px;
     }
 
-    p {
+    p, li {
       font-size: 14px;
       max-width: 25em;
     }
