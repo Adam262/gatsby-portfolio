@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { colors } from 'Styles/main'
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
 const Link = styled.a`
-  color: ${props => colors.lightGrey};
+  color: ${colors.lightGrey};
   font-family: 'Raleway', Arial, sans-serif;
   padding-left: 5px;
   padding-right: 5px;
@@ -16,11 +16,11 @@ const Link = styled.a`
 `;
 
 const ExternalLink = ({noUnderline, href, children}) => {
-  return <ThemeProvider theme={colors}>
-    <Link noUnderline={noUnderline} colors={colors} href={href} target="_blank">
+  return (
+    <Link noUnderline={noUnderline} href={href} target="_blank">
       {children}
     </Link>
-  </ThemeProvider>
+  );
 }
 
 export default ExternalLink;

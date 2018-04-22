@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import SocialNavbar from './social_navbar';
 
 import { breakPoints, colors } from 'Styles/main';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 
 const StyledFooter = styled.div`
   width: 75%;

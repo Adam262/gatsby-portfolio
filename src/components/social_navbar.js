@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 
 import { IconLink, Icon } from 'Styles/icons'
 
-import { colors } from 'Styles/main'
 import { externalLinks } from 'Root/constants.js'
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
 const SocialNavbar = () => {
   return (

@@ -5,9 +5,9 @@ import _Link from 'gatsby-link'
 
 import { colors } from 'Styles/main'
 
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
-const borderBottom = (noDecoration, isActive, colors) => {
+const borderBottom = (noDecoration, isActive) => {
   if (!!noDecoration) {
     return 'inheirit';
   }
@@ -15,29 +15,24 @@ const borderBottom = (noDecoration, isActive, colors) => {
   return isActive ? `2px solid ${colors.white}` : `2px solid ${colors.darkGrey}`;
 }
 
-const LinkWithTheme = ({noDecoration, active, ...props}) => {
-  return <ThemeProvider theme={colors}>
-    <_Link {...props}/>
-  </ThemeProvider>
-}
-
-const Link = styled(LinkWithTheme)`
-  color: ${props => props.theme.white};
+const Link = styled(_Link)`
+  color: ${colors.white};
   display: inline-block;
   font-family: 'Raleway', Arial, sans-serif;
   padding-bottom: 5px;
   text-decoration: none;
-  border-bottom: ${props => borderBottom(props.noDecoration, props.active, props.theme)};
+  border-bottom: ${props => borderBottom(props.noDecoration, props.active)};
   transition-property: border-bottom;
   transition-duration: 1s;
 
   &:hover {
-    border-bottom: ${props => props.noDecoration ? 'none' : '2px solid ' + props.theme.white};
+    border-bottom: ${props => props.noDecoration ? 'none' : '2px solid ' + colors.white};
   }
 `;
 
 Link.propTypes = {
   noDecoration: PropTypes.bool,
+  active: PropTypes.bool,
 }
 
 export default Link;

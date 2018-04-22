@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styled, { ThemeProvider } from 'styled-components'
-import { colors } from 'Styles/main'
+import styled from 'styled-components'
 import { fadeInUp } from 'Styles/keyframes'
 
 const StyledDiv = styled.div`
@@ -13,12 +12,10 @@ const StyledDiv = styled.div`
 
 const Card = ({title, className, children}) => { 
   return (
-    <ThemeProvider theme={colors}> 
-      <StyledDiv className={className}>
-        <h2> {title} </h2>
-        { children }
-      </StyledDiv>
-    </ThemeProvider>
+    <StyledDiv className={className}>
+      <h2> {title} </h2>
+      { children }
+    </StyledDiv>
   )
 }
 

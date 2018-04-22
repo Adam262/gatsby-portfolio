@@ -2,7 +2,7 @@ import React from 'react'
 
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faCamera from '@fortawesome/fontawesome-free-solid/faCamera'
+import faCamera from '@fortawesome/fontawesome-free-solid/faCameraRetro'
 
 import brands from '@fortawesome/fontawesome-free-brands'
 
@@ -10,15 +10,15 @@ import devicon from 'devicon';
 import 'Styles/devicon/devicon.css';
 
 import { colors, breakPoints } from 'Styles/main'
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
 const IconWithHover = styled(FontAwesomeIcon)`
   padding: 0 1.5em;
   font-size: 20px;
-  color: ${props => props.colors.lightGrey};
+  color: ${colors.lightGrey};
 
   &:hover {
-    color: ${props => props.colors.white};
+    color: ${colors.white};
   }
 
   @media (max-width: ${breakPoints.tablet}) {
@@ -29,7 +29,7 @@ const IconWithHover = styled(FontAwesomeIcon)`
 
 const PlainIcon = styled(FontAwesomeIcon)`
   font-size: 20px;
-  color: ${props => props.colors.lightGrey};
+  color: ${colors.lightGrey};
 
   @media (max-width: ${breakPoints.tablet}) {
     font-size: 15px;
@@ -37,20 +37,14 @@ const PlainIcon = styled(FontAwesomeIcon)`
 `;
 
 export const Icon = ({faClass}) => {
-  return (
-    <ThemeProvider theme={colors}>
-        <PlainIcon colors={colors} icon={faClass}/>
-    </ThemeProvider>
-  );
+  return <PlainIcon icon={faClass}/>;
 }
 
 export const IconLink = ({href, faClass}) => {
   return (
-    <ThemeProvider theme={colors}>
-      <a href={href} target="_blank"> 
-        <IconWithHover colors={colors} icon={["fab", faClass]}/>
-      </a>
-    </ThemeProvider>
+    <a href={href} target="_blank"> 
+      <IconWithHover icon={["fab", faClass]}/>
+    </a>
   );
 }
 

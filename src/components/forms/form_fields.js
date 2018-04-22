@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import _TextField from 'material-ui/TextField';
 
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from 'Styles/main';
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const styleProps = {
-  inputStyle: { color: colors.white },
+  inputStyle: { color: colors.white, cursor: 'pointer' },
   textareaStyle: { color: colors.white },
   floatingLabelStyle: { color: colors.darkGrey },
   floatingLabelFocusStyle: { color: colors.white },
@@ -22,17 +22,15 @@ const styleProps = {
 
 export const TextField = ({name, label, inline, ...rest}) => {
   return(
-    <ThemeProvider theme={colors}>
-      <Container inline={inline}>
-        <_TextField
-          name={name}
-          hintText={label}
-          floatingLabelText={label}
-          { ...rest }
-          { ...styleProps }
-        />      
-      </Container>
-    </ThemeProvider>
+    <Container inline={inline}>
+      <_TextField
+        name={name}
+        hintText={label}
+        floatingLabelText={label}
+        { ...rest }
+        { ...styleProps }
+      />      
+    </Container>
   );
 }
 

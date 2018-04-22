@@ -2,9 +2,9 @@ import React from 'react'
 import Link from './link'
 import Helmet from 'react-helmet'
 
-import { breakPoints, colors } from 'Styles/main'
+import { breakPoints } from 'Styles/main'
 
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 import { cloneDeep, mapValues, findKey } from 'lodash';
 
 import ExternalLink from 'Components/external_link';
@@ -80,47 +80,45 @@ class Header extends React.Component {
     const contact = this.state.links.contact;
 
     return (
-      <ThemeProvider theme={colors}>
-        <Container> 
-          <Helmet title={ this.activeTitle() } />
+      <Container> 
+        <Helmet title={ this.activeTitle() } />
+        <Link 
+          noDecoration 
+          onClick={ () => this.onClick("home") } 
+          to="/" 
+        > 
+          <h1> Adam Barcan </h1> 
+        </Link>
+      
+        <NavBar>
           <Link 
-            noDecoration 
-            onClick={ () => this.onClick("home") } 
-            to="/" 
+            active={ skills.active }
+            onClick={ () => this.onClick("skills") } 
+            to= { skills.to }
           > 
-            <h1> Adam Barcan </h1> 
+            { skills.text } 
           </Link>
-        
-          <NavBar>
-            <Link 
-              active={ skills.active }
-              onClick={ () => this.onClick("skills") } 
-              to= { skills.to }
-            > 
-              { skills.text } 
-            </Link>
 
-            <Link 
-              active={ about.active }
-              onClick={ () => this.onClick("about") } 
-              to= { about.to }
-            > 
-              { about.text } 
-            </Link>   
+          <Link 
+            active={ about.active }
+            onClick={ () => this.onClick("about") } 
+            to= { about.to }
+          > 
+            { about.text } 
+          </Link>   
 
-            <Link 
-              active={ contact.active }
-              onClick={ () => this.onClick("contact") } 
-              to= { contact.to }
-            > 
-              { contact.text } 
-            </Link>
+          <Link 
+            active={ contact.active }
+            onClick={ () => this.onClick("contact") } 
+            to= { contact.to }
+          > 
+            { contact.text } 
+          </Link>
 
-            <ExternalLink noUnderline href={externalLinks.photoPortfolio}> <IconCamera/> </ExternalLink>
+          <ExternalLink noUnderline href={externalLinks.photoPortfolio}> <IconCamera/> </ExternalLink>
 
-          </NavBar>
-        </Container>
-      </ThemeProvider>
+        </NavBar>
+      </Container>
     );
   }
 }
