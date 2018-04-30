@@ -46,6 +46,7 @@ injectGlobal`
 
   p, span {
     color: ${colors.darkGrey};
+    font-family: 'Raleway', Arial, sans-serif;
     line-height: 1.4em;
     text-align: justify;
     text-justify: inter-word;
