@@ -57,7 +57,7 @@ const Skills = () => (
     { <SkillSet title="JS Ecosystem" skills={[<IconReact/>, <IconJs/>, <IconWebpack/>, <span> Styled Components </span>]} /> }
     { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconRedis/>, <IconPostGresQL/>, <span> GraphQL </span>, <span> Sidekiq </span>, <span> Rspec </span>]} /> }
     { !isMobile() && <SkillSet title="CI / CD" skills={[<IconDocker/>, <span> Jenkins </span>, <span> Solano </span>]} /> }
-    { !isMobile() && <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> QA </span>, <span> Agile / Kanban </span>, <span> Jira </span>]} /> }
+    { !isMobile() && <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> Automated Testing </span>, <span> Agile / Kanban </span>, <span> Jira </span>]} /> }
 
   </Card>
 )

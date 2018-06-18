@@ -13,6 +13,7 @@ exports.modifyWebpackConfig = function({config, env}) {
         Components: path.resolve(__dirname, 'src/components/'),
         Pages: path.resolve(__dirname, 'src/pages/'),
         Styles: path.resolve(__dirname, 'src/styles/'),
+        Image: path.resolve(__dirname, 'src/img/'),
         Root: path.resolve(__dirname, './src'),
       },
       extensions: ['', '.js', '.jsx', '.json'],

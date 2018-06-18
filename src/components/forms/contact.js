@@ -17,18 +17,17 @@ class ContactForm extends React.Component {
         <input type="hidden" name="_next" value="/" />
         <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-        <FormGroup 
-          justify={!isMobile()}>
+        <FormGroup>
           <TextField
-            fullWidth={isMobile()}
-            inline={!isMobile()}
+            fullWidth
             name="full_name"
             label="Full Name"
           />
+        </FormGroup>
    
+        <FormGroup> 
           <TextField
-            fullWidth={isMobile()}
-            inline={!isMobile()}
+            fullWidth
             name="email"
             type="email"
             label="Email"

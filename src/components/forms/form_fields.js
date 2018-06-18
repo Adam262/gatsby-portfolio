@@ -7,7 +7,6 @@ import styled from 'styled-components';
 import { colors } from 'Styles/main';
 
 const Container = styled.div`
-  display: ${props => !!props.inline ? "inline-block" : "block" };
   padding-right: 30px;
 `;
 
@@ -20,9 +19,9 @@ const styleProps = {
   underlineFocusStyle: { borderBottom: `2px solid ${colors.white}` },
 };
 
-export const TextField = ({name, label, inline, ...rest}) => {
+export const TextField = ({name, label, ...rest}) => {
   return(
-    <Container inline={inline}>
+    <Container>
       <_TextField
         name={name}
         hintText={label}
@@ -41,7 +40,5 @@ TextField.propTypes = {
 }
 
 export const FormGroup = styled.div`
-  display: ${props => !!props.justify ? "flex" : "block"};
-  justify-content: space-between;
-  width: 40em;
+  width: 30em;
 `;

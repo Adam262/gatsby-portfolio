@@ -15,7 +15,8 @@ My goals with this project are:
 * Form components are built with Google Material-UI
 * Form is submitted with Formspree
 * There is some overriding of the webpack config to allow path aliasing. This removes brittle relative paths. 
-
+* I used CSS grid for the first time on the `About` page
+* Images are handled via a Gatsby plugin that resizes, optimizes size, etc. Images are accessed via GraphQL query. 
 
 ### To Do
 * Show my running data in this site via a charting library

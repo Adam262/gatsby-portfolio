@@ -1,5 +1,6 @@
 import React from 'react'
 import ExternalLink from 'Components/external_link';
+import { breakPoints, colors } from 'Styles/main';
 
 import { myEmail } from '../constants.js'
 
@@ -7,39 +8,81 @@ import Card from "Components/card"
 import ContactForm from "Components/forms/contact"
 
 import { isMobile } from 'Root/utils';
+import { fadeInUp } from 'Styles/keyframes'
 
 import styled from 'styled-components';
 
-const About = () => (
-  <div>
-    <Card title="About Me">
-      <p> 
-        I've been a full-time software engineer at Greenhouse.io since 2014. I started on the Test Automation team, where I learned the ins and outs of 
-        unit and integration testing over a Rails app. Within a year, I earned a promotion to the Product Engineering team, where I build features and fix bugs. 
-        I mainly work in Rails and React/Webpack.
-        
-        <br/>
-        <br/>
+const Column = styled.div`
+  width: 43%;
+  margin: 0 4%;
+  display: inline-block;
 
-        I also have a regular rotation as a product support engineer. About once a month, I handle tickets for customers with issues escalated by our chat support team. 
+  &:first-of-type {
+    margin-left: 0;
+  }
 
-        <br/>
-        <br/>
+  @media (max-width: ${breakPoints.tablet}) {
+    width: 100%;
+    margin: 0;
+  }
+`;
 
-        { 
-          !isMobile() && 
-          <span> 
-            I am a graduate of Fullstack Academy of Code, an immersive coding bootcamp based in NYC. 
-            Before my transition to programming, I earned a master's degree in international affairs and economics from Columbia University.
-          </span>
-        }
-      </p>
-    </Card> 
+const Image = styled.img`
+  opacity: 0.25;
+  height: 24em;
+  width: 16em;
+  animation: ${fadeInUp} 1.0s linear;
 
-    <Card title="">
+  @media (max-width: ${breakPoints.tablet}) {
+    display: none;
+  }
+`;
 
-    </Card>
-  </div>
-)
+const About = ({ data }) => {
+  return (
+    <div>
+      <Column>
+        <Card title="About Me">
+          <p> 
+            I've been a full-time software engineer at Greenhouse.io since 2014. I started on the Test Automation team, where I learned the ins and outs of 
+            unit and integration testing over a Rails app. Within a year, I earned a promotion to the Product Engineering team, where I build features and fix bugs. 
+            I mainly work in Rails and React/Webpack.
+            
+            <br/>
+            <br/>
+
+            I also have a regular rotation as a product support engineer. About once a month, I handle tickets for customers with issues escalated by our chat support team. 
+
+            <br/>
+            <br/>
+
+            { 
+              !isMobile() && 
+              <span> 
+                I am a graduate of Fullstack Academy of Code, an immersive coding bootcamp based in NYC. 
+                Before my transition to programming, I earned a master's degree in international affairs and economics from Columbia University.
+              </span>
+            }
+          </p>
+        </Card> 
+      </Column>
+      <Column> 
+        <Image src={require('Img/fence.jpg')} />
+      </Column>
+    </div>
+  );
+}
 
 export default About
+
+export const query = graphql`
+  query FileTreeQuery {
+    allSitePage {
+      edges {
+        node {
+          path
+        }
+      }
+    }
+  }
+`;
