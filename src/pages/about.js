@@ -1,42 +1,16 @@
 import React from 'react'
 import ExternalLink from 'Components/external_link';
-import { breakPoints, colors } from 'Styles/main';
-
-import { myEmail } from '../constants.js'
+import { colors } from 'Styles/main';
 
 import Card from "Components/card"
-import ContactForm from "Components/forms/contact"
+import { Column } from "Components/grid"
+import { ColumnImage as Image } from "Components/images"
 
 import { isMobile } from 'Root/utils';
-import { fadeInUp } from 'Styles/keyframes'
 
 import styled from 'styled-components';
 
-const Column = styled.div`
-  width: 43%;
-  margin: 0 4%;
-  display: inline-block;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  @media (max-width: ${breakPoints.tablet}) {
-    width: 100%;
-    margin: 0;
-  }
-`;
-
-const Image = styled.img`
-  opacity: 0.25;
-  height: 24em;
-  width: 16em;
-  animation: ${fadeInUp} 1.0s linear;
-
-  @media (max-width: ${breakPoints.tablet}) {
-    display: none;
-  }
-`;
+import fenceImage from 'Image/fence.jpg';
 
 const About = ({ data }) => {
   return (
@@ -67,7 +41,7 @@ const About = ({ data }) => {
         </Card> 
       </Column>
       <Column> 
-        <Image src={require('Img/fence.jpg')} />
+        <Image title='image by ig: @sofiography' src={fenceImage} />
       </Column>
     </div>
   );
