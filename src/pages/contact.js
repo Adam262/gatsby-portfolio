@@ -11,8 +11,6 @@ import styled from 'styled-components';
 
 import { isMobile } from 'Root/utils';
 
-import hatImage from 'Image/hat.jpg';
-
 const Contact = () => {
   return (
     <div>
@@ -23,7 +21,7 @@ const Contact = () => {
         </Card>
       </Column>
       <Column>
-        <Image title='image by ig: @sofiography' src={hatImage} />
+        <Image title='image by ig: @sofiography' src={require('Image/hat.jpg')} />
       </Column>
     </div>
   );

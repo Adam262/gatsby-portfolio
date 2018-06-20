@@ -10,8 +10,6 @@ import { isMobile } from 'Root/utils';
 
 import styled from 'styled-components';
 
-import fenceImage from 'Image/fence.jpg';
-
 const About = ({ data }) => {
   return (
     <div>
@@ -41,7 +39,7 @@ const About = ({ data }) => {
         </Card> 
       </Column>
       <Column> 
-        <Image title='image by ig: @sofiography' src={fenceImage} />
+        <Image title='image by ig: @sofiography' src={require('Image/fence.jpg')} />
       </Column>
     </div>
   );
