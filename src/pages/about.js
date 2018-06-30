@@ -6,9 +6,12 @@ import Card from "Components/card"
 import { Column } from "Components/grid"
 import { ColumnImage as Image } from "Components/images"
 
+import fenceImage from 'Image/fence.jpg';
+
 import { isMobile } from 'Root/utils';
 
 import styled from 'styled-components';
+
 
 const About = ({ data }) => {
   return (
@@ -39,7 +42,7 @@ const About = ({ data }) => {
         </Card> 
       </Column>
       <Column> 
-        <Image title='image by ig: @sofiography' src={require('Image/fence.jpg')} />
+        <Image title='image by ig: @sofiography' src={fenceImage} />
       </Column>
     </div>
   );

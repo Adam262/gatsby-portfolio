@@ -6,6 +6,7 @@ import Card from "Components/card"
 import ContactForm from "Components/forms/contact"
 import { Column } from "Components/grid"
 import { ColumnImage as Image } from "Components/images"
+import hatImage from 'Image/hat.jpg';
 
 import styled from 'styled-components';
 
@@ -21,7 +22,7 @@ const Contact = () => {
         </Card>
       </Column>
       <Column>
-        <Image title='image by ig: @sofiography' src={require('Image/hat.jpg')} />
+        <Image title='image by ig: @sofiography' src={hatImage} />
       </Column>
     </div>
   );
