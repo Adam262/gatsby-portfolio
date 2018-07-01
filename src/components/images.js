@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { breakPoints } from 'Styles/main';
 
-import { fadeInUp } from 'Styles/keyframes';
+import { fadeInUp, fadeInOpacity } from 'Styles/keyframes';
 
 export const ColumnImage = styled.img`
   opacity: 0.25;
@@ -13,5 +13,10 @@ export const ColumnImage = styled.img`
 
   @media (max-width: ${breakPoints.tablet}) {
     display: none;
+  }
+
+  &:hover {
+    opacity: 0.75;
+    transition: opacity 1.0s ease-out;
   }
 `;

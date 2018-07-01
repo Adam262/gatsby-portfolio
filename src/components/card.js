@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled from 'styled-components'
-import { fadeInUp } from 'Styles/keyframes'
+import { fadeInUpWithOpacity } from 'Styles/keyframes'
 
 const StyledDiv = styled.div`
   max-width: 50em;
   text-align: justify;
-  animation: ${fadeInUp} 1.0s linear;
+  animation: ${fadeInUpWithOpacity} 1.0s linear;
 `;
 
 const Card = ({title, className, children}) => { 

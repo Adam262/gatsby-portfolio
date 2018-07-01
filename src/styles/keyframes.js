@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-export const fadeInUp = keyframes`
+export const fadeInUpWithOpacity = keyframes`
   from {
     opacity: 0;
     transform: translate3d(0,100px,0)
@@ -11,3 +11,25 @@ export const fadeInUp = keyframes`
     transform: none
   }
 `;
+
+export const fadeInUp = keyframes`
+  from {
+    transform: translate3d(0,100px,0)
+  }
+
+  to {
+    transform: none
+  }
+`;
+
+export const fadeInOpacity = keyframes`
+  from {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 0.75;
+  }
+`;
+
+

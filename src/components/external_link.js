@@ -6,8 +6,8 @@ import styled from 'styled-components'
 const Link = styled.a`
   color: ${colors.lightGrey};
   font-family: 'Raleway', Arial, sans-serif;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
   text-decoration: ${props => props.noUnderline ? 'none' : 'inheirit' };
 
   &:hover {

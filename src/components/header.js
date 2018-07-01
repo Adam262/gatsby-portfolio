@@ -47,9 +47,9 @@ class Header extends React.Component {
 
     this.state = {
       links: {
-        skills: { to: 'skills', text: 'Skills', active: false },
-        about: { to: 'about', text: 'About', active: false },
-        contact: { to: 'contact', text: 'Contact', active: false },
+        skills: { to: '/skills', text: 'Skills', active: false },
+        about: { to: '/about', text: 'About', active: false },
+        contact: { to: '/contact', text: 'Contact', active: false },
       }
     }
   }

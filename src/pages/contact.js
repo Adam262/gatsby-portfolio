@@ -16,8 +16,8 @@ const Contact = () => {
   return (
     <div>
       <Column>
-        <Card title="Let's talk">
-          <p> Hit me up about coding, photography or running, or say hi </p>
+        <Card title="Say hi">
+          <p> Hit me up about coding, photography or running.</p>
           <ContactForm/>
         </Card>
       </Column>

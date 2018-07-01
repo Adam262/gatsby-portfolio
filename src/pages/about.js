@@ -17,28 +17,24 @@ const About = ({ data }) => {
   return (
     <div>
       <Column>
-        <Card title="About Me">
+        <Card title="About me">
           <p> 
-            I've been a full-time software engineer at Greenhouse.io since 2014. I started on the Test Automation team, where I learned the ins and outs of 
-            unit and integration testing over a Rails app. Within a year, I earned a promotion to the Product Engineering team, where I build features and fix bugs. 
-            I mainly work in Rails and React/Webpack.
-            
-            <br/>
-            <br/>
-
-            I also have a regular rotation as a product support engineer. About once a month, I handle tickets for customers with issues escalated by our chat support team. 
-
-            <br/>
-            <br/>
-
-            { 
-              !isMobile() && 
-              <span> 
-                I am a graduate of Fullstack Academy of Code, an immersive coding bootcamp based in NYC. 
-                Before my transition to programming, I earned a master's degree in international affairs and economics from Columbia University.
-              </span>
-            }
+            I've been a software engineer at <ExternalLink noUnderline href="https://www.greenhouse.io">Greenhouse</ExternalLink> since 2014. I started on our test automation team, where I learned the ins and outs of 
+            unit and integration testing over a Rails app. Within a year, I earned a promotion to the product engineering team, where I build full-stack features and fix bugs. 
+            I mainly work in Rails, Postgres and React/Webpack.
           </p>
+            
+          <p>
+            I also have a monthly rotation as a product support engineer, where I handle tickets for customers with issues escalated by our chat support team. 
+          </p>
+
+          { 
+            !isMobile() && 
+            <p> 
+              I am a graduate of Fullstack Academy of Code, an immersive coding bootcamp based in NYC. 
+              Before my transition to programming, I earned a master's degree in international affairs and economics from Columbia University.
+            </p>
+            }
         </Card> 
       </Column>
       <Column> 
