@@ -1,4 +1,5 @@
 import styled, { injectGlobal } from 'styled-components';
+import { openSans, raleWay } from "./fonts/fonts";
 
 export const colors = {
   black: 'black',
@@ -18,11 +19,11 @@ export const breakPoints = {
 injectGlobal`
   @font-face {
     font-family: 'Raleway';
-    src: url('./raleway/Raleway-Regular.ttf');
+    src: local('Raleway'), url(${raleWay});
 
     font-family: 'Open Sans';
-    src: url('./open-sans/OpenSans-Regular.ttf');
-  } 
+    src: local('Open Sans'), url(${openSans});
+  }
 
   body {
     background: black;
