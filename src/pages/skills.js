@@ -5,7 +5,6 @@ import Card from 'Components/card'
 import { 
   IconReact,
   IconJs,
-  IconWebpack,
   IconRails,
   IconDocker,
   IconPostGresQL,
@@ -54,10 +53,10 @@ const SkillSet = ({title, skills}) => {
 const Skills = () => (
     <Card title="Skills">
     
-    { <SkillSet title="JS Ecosystem" skills={[<IconReact/>, <IconJs/>, <IconWebpack/>, <span> Styled Components </span>]} /> }
-    { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconRedis/>, <IconPostGresQL/>, <span> GraphQL </span>, <span> Sidekiq </span>, <span> Rspec </span>]} /> }
+    { <SkillSet title="JS Ecosystem" skills={[<IconJs/>, <IconReact/>, <span> Redux </span>, <span> Styled Components </span>]} /> }
+    { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconPostGresQL/>, <span> GraphQL </span>, <IconRedis/>, <span> Sidekiq </span>]} /> }
     { !isMobile() && <SkillSet title="CI / CD" skills={[<IconDocker/>, <span> Jenkins </span>, <span> Solano </span>]} /> }
-    { !isMobile() && <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> Automated Testing </span>, <span> Agile / Kanban </span>, <span> Jira </span>]} /> }
+    { !isMobile() && <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> Automated Testing </span>, <span> Agile / Kanban </span>]} /> }
 
   </Card>
 )

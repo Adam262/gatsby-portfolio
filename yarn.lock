@@ -2359,8 +2359,8 @@ detect-port@1.2.2, detect-port@^1.2.1:
     debug "^2.6.0"
 
 devicon@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/devicon/-/devicon-2.0.0.tgz#6374a28c18561abe15720af01dca5ea0953cd51b"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/devicon/-/devicon-2.2.0.tgz#a19ddc9410f7294fbbe0825fe6259c80681cdb15"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
