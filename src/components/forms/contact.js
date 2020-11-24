@@ -11,7 +11,7 @@ class ContactForm extends React.Component {
   render() {
     return(
       <form style={{ width: '60em' }}
-        action="https://formspree.io/hello@adambarcan.com"
+        action="https://formspree.io/f/mvovbovk"
         method="POST"
       >
         <input type="hidden" name="_next" value="/" />
