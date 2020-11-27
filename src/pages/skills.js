@@ -53,9 +53,9 @@ const SkillSet = ({title, skills}) => {
 const Skills = () => (
     <Card title="Skills">
     
+    { !isMobile() && <SkillSet title="DevOps" skills={[<IconDocker/>, <span> Kubernetes </span>, <span> Terraform </span>, <span> Buildpacks </span>, <span> Golang </span>]} /> }
     { <SkillSet title="JS Ecosystem" skills={[<IconJs/>, <IconReact/>, <span> Redux </span>, <span> Styled Components </span>]} /> }
     { <SkillSet title="Rails Ecosystem" skills={[<IconRails/>, <IconPostGresQL/>, <span> GraphQL </span>, <IconRedis/>, <span> Sidekiq </span>]} /> }
-    { !isMobile() && <SkillSet title="CI / CD" skills={[<IconDocker/>, <span> Jenkins </span>, <span> Solano </span>]} /> }
     { !isMobile() && <SkillSet title="Additional" skills={[<IconGit/>, <span> Code Review </span>, <span> Automated Testing </span>, <span> Agile / Kanban </span>]} /> }
 
   </Card>

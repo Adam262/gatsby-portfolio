@@ -19,20 +19,20 @@ const About = ({ data }) => {
       <Column>
         <Card title="About me">
           <p> 
-            I've been a software engineer at <ExternalLink noUnderline href="https://www.greenhouse.io">Greenhouse</ExternalLink> since 2014. I started on our test automation team, where I learned the ins and outs of 
-            unit and integration testing over a Rails app. Within a year, I earned a promotion to the product engineering team, where I build full-stack features and fix bugs. 
-            I mainly work in Rails, Postgres and React/Webpack.
+            I&#39;ve been a software engineer at <ExternalLink noUnderline href="https://www.greenhouse.io">Greenhouse</ExternalLink> since 2014. I started on our test automation team, where I learned the ins and outs of 
+            unit and integration testing over a Rails app. Within a year, I earned a promotion to the product engineering team, where I built full-stack features and fixed bugs,
+            in Rails, Postgres and React/Webpack.
           </p>
             
           <p>
-            I also have a monthly rotation as a product support engineer, where I handle tickets for customers with issues escalated by our chat support team. 
+            I&#39;m now on our DevOps team, where I work on tooling for deployments, buildpacks and autoscaling. My main tech is Kubernetes, Terraform, Argo, Golang and scripting.  
           </p>
 
           { 
             !isMobile() && 
             <p> 
               I am a graduate of Fullstack Academy of Code, an immersive coding bootcamp based in NYC. 
-              Before my transition to programming, I earned a master's degree in international affairs and economics from Columbia University.
+              Before my transition to programming, I earned a master&#39;s degree in international affairs and economics from Columbia University.
             </p>
             }
         </Card> 
