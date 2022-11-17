@@ -9,7 +9,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "@fortawesome/react-fontawesome": "^0.0.18",
     "devicon": "^2.0.0",
-    "gatsby": "^1.9.204",
+    "gatsby": "^5.0.1",
     "gatsby-image": "^1.0.47",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-react-helmet": "^2.0.5",
